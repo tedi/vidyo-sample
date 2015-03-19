@@ -1,0 +1,25 @@
+Client API for Android Version: 2.1.0.00087
+Android Version 4.2.2
+SDK Level: 17
+Minimum SDK Level 10 (2.3.3)
+NDK Version : 8
+
+Changes in sample:
+- new certificate file added
+- getAndroidInternalMemDir() added for writing the licensceto internal memory
+- SetSpeakerVolume() was added on JNI.
+
+Fixes and improvements since version 2.0.0.00073 in Client API for Android:
+
+*  App crashed when app backgrounded and lost network connection
+*  fecc doesn't function in v2.1.x portal
+*  Kindle Fire: App crashes on launch, and other crashes on the Kindle Fire
+*  Foreign display name characters not being shown on participant names
+*  Added public API VIDYO_CLIENT_REQUEST_SET_LABEL
+*  Added public events: VIDYO_CLIENT_IN_EVENT_SET_DISPLAY_NAME and VIDYO_CLIENT_IN_EVENT_RESET_DISPLAY_NAME
+*  Share: share is not displayed on device
+*  Implemented VIDYO_CLIENT_REQUEST_GET_MUTED_SERVER_AUDIO_IN API
+*  join a conference with shares already being shared - doesn't display shares
+*  other bug fixes
+*  The speaker volume is too low on Android.
+

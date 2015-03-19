@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_engagement"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:keepScreenOn="true"
+    android:padding="0dp" >
+
+    <ViewFlipper
+        android:id="@+id/ViewFlipper01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        
+        <RelativeLayout
+            android:id="@+id/engagement_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >  
+            
+            <ImageView
+                android:id="@+id/top_nav_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside" />
+            
+            <TextView
+            	android:id="@+id/message"
+                android:layout_width="@dimen/video_engagement_message_width"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="60dp"
+                android:gravity="center|center_horizontal"
+                android:text="@string/contacting_provider"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/just_relax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/message"
+                android:layout_centerHorizontal="true"
+                android:gravity="center|center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/be_patient"
+                android:visibility="invisible"/> 
+                 	                
+            <Button
+                android:id="@+id/button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/misc_cancel" />
+            
+            <RelativeLayout
+                android:id="@+id/spinner_layout"
+                android:layout_width="@dimen/video_engagement_animation_size"
+                android:layout_height="@dimen/video_engagement_animation_size"
+                android:layout_below="@+id/just_relax"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/video_engagement_animation_margin_top" 
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/connecting_dial_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center" />
+
+                <ImageView
+                    android:id="@+id/connecting_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal|center_vertical" />
+            </RelativeLayout>
+           
+            <RelativeLayout
+	            android:id="@+id/video_layout"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:orientation="vertical"
+	            android:layout_centerHorizontal="true"
+	            android:layout_below="@id/just_relax" >
+            
+	            <VideoView
+			       	android:id="@+id/video_view"
+			       	android:layout_width="@dimen/video_view_width"
+			       	android:layout_height="@dimen/video_view_height"
+			       	android:layout_centerHorizontal="true"
+			       	android:layout_gravity="center_horizontal|center_vertical"
+			       	android:layout_marginRight="20dp"
+			       	android:layout_marginLeft="20dp" 
+			       	android:layout_marginTop="@dimen/video_engagement_view_marginTop"
+			       	android:layout_marginBottom="50dp" />
+	            
+	        </RelativeLayout>
+            
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:id="@+id/engagement_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <!-- the TitleBar layout height is in pixels not dp because Vidyo leaves a 70px margin at top of screen -->
+
+            <RelativeLayout
+                android:id="@+id/engagement_button_bar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" >
+
+                <Button
+                    android:id="@+id/button_refresh_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="@string/console_refresh_video" />
+
+                <Button
+                    android:id="@+id/button_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:text="@string/misc_exit" />
+
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/engagement_text_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/engagement_button_bar">
+            
+	            <TextView 
+	                android:id="@+id/conversation_begin"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	    			android:layout_centerInParent="true"
+	    			android:gravity="center_vertical|center_horizontal"
+	    			android:text="@string/conversation_begin" />
+	            
+	        </RelativeLayout>
+	        
+            <RelativeLayout
+                android:id="@+id/refresh_video_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/engagement_button_bar"
+                android:visibility="gone">
+            
+	            <TextView 
+	                android:id="@+id/refresh_video_text"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	    			android:layout_centerInParent="true"
+	    			android:gravity="center_vertical|center_horizontal"
+	    			android:text="@string/refresh_video_loading" />
+	            
+	        </RelativeLayout>
+	        
+            <RelativeLayout
+                android:id="@+id/wrapup_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/engagement_button_bar"
+                android:visibility="gone">
+            
+	            <TextView 
+	                android:id="@+id/wrapup_text"
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent"
+	    			android:layout_centerInParent="true"
+	    			android:gravity="center_vertical|center_horizontal"
+	    			android:text="@string/ending_engagement_text" />
+	            
+	        </RelativeLayout>
+	        
+        </RelativeLayout>
+    </ViewFlipper>
+
+</RelativeLayout>

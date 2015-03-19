@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- Video Engagement -->
+    <dimen name="video_engagement_animation_margin_top">40dp</dimen>
+    <dimen name="video_engagement_message_width">380dp</dimen>
+    <dimen name="video_engagement_animation_size">220dp</dimen>
+    <dimen name="video_engagement_view_marginTop">70dp</dimen>
+    <dimen name="video_view_width">500dp</dimen>
+    <dimen name="video_view_height">350dp</dimen>
+    
+</resources>
